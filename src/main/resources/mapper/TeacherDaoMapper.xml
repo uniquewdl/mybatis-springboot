@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.springbootmybatis.dao.TeacherDao">
+    <select id="findTeacherListByNameLike" parameterType="com.example.springbootmybatis.vo.TeacherVo" resultType="com.example.springbootmybatis.po.Teacher" >
+        select t.teacher_id teacherId, t.teacher_name teacherName ,t.sex sex,t.age age,t.birthday birthday, t.is_value isValue  from teacher t
+        where t.teacher_name like '%${teacherName}%'
+    </select>
+    <update id="deleteTeacherById" parameterType="java.lang.Integer"  >
+      DROP TABLE test.teacher
+    </update>
+</mapper>

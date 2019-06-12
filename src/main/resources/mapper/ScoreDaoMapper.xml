@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.springbootmybatis.dao.ScoreDao">
+    <update id="update" parameterType="com.example.springbootmybatis.po.Score"  >
+        update score s set
+              <if test="stuname!=null">
+                  s.stuname=#{stuname},
+              </if>
+              <if test="score!=null">
+                     s.score=#{score}
+              </if>
+          where s.studid=#{studid}
+     </update>
+</mapper>
