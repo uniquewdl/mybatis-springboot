@@ -42,7 +42,9 @@ public class TestContorller {
 
     @RequestMapping("/saveStudent")
     public String saveStudent(Student student) {
+        
         String isSuccess = "success";
+
         try {
             testService.save(student);
         } catch (Exception e) {
