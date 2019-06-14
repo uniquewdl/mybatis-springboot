@@ -18,6 +18,12 @@ public class AnnoationController {
      * 新功能发布
      */
 
+    /**
+     * Version新增操作
+     * @param name
+     * @return
+     */
+
     @RequestMapping("notnull")
     public String validNotNull(@NotNull String name){
         return name;
