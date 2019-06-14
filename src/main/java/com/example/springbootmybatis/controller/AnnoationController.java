@@ -14,9 +14,15 @@ import javax.validation.constraints.NotNull;
 @RequestMapping("test/")
 public class AnnoationController {
     private static final String TAG = "AnnoationController";
+    /**
+     * 新功能发布
+     */
 
     @RequestMapping("notnull")
     public String validNotNull(@NotNull String name){
         return name;
     }
+
+
+
 }  
